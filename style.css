@@ -1,0 +1,139 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+    list-style: none;
+    text-decoration: none;
+}
+.content {
+    background-color: rgb(81, 136, 255);
+    padding: 20px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center; 
+    margin: 40px auto;
+    box-shadow: 0px 10px 20px   rgba(0, 0, 0, 0.285);
+}
+.content label {
+    font-weight: 700;
+    color: white;
+}
+.content img {
+    width: 100px;
+}
+.div-btn{
+    background-color: rgb(240, 240, 240);
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+.btn-1 {
+    background-color: rgb(169, 196, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: 600;
+    width: 60%;
+    color: black;
+}
+.btn-1:hover {
+    background-color: rgb(144, 172, 231);
+}
+
+.btn-2 {
+    width: 60%;
+    background-color: rgb(81, 136, 255);
+    border-radius: 7px;
+    font-weight: 600;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+}
+.btn-2:hover {
+    background-color: rgb(144, 172, 231);
+}
+.div-btn-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.heart {
+    position: relative;
+    margin: 30px auto 0px;
+    width: 50px; /* Ukuran diperpendek */
+    height: 50px; /* Ukuran diperpendek */
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Ukuran diperpendek */
+    height: 50px; /* Ukuran diperpendek */
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 70%;
+        height: auto;
+        padding: 3%;
+        margin: 20px auto;
+    }
+    .content img {
+        width: 200px;
+    }
+    .content label {
+        font-size: 20px;
+    }
+    .ask {
+        height: auto;
+    }
+    .div-btn {
+        width: 60vw;
+        margin: 50px auto 0px;
+        height: auto;
+        padding: 50px 0;
+    }
+    .heart {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+    }
+    .heart::before,
+    .heart::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 380px) {
+
+}
